@@ -47,18 +47,27 @@ export default function Tree() {
   };
 
   return (
-    <div className="relative" ref={treeRef}>
-      <img
+    <div>
+      <button
         onClick={shakeTree}
-        src="/images/tree.svg"
-        alt="Tree"
-        id="apple-tree"
-        className="absolute"
-      />
-      <div className="flex items-center space-x-10 absolute left-[9rem] top-[12rem] ">
-        {treeList.map((apple, index) => (
-          <Apple key={index} id={index} onFloor={apple.onFloor} />
-        ))}
+        className="bg-green-500 text-green-200 px-6 py-1.5 rounded-xl hover:bg-green-800 transition-colors duration-300"
+      >
+        Claim the apples
+      </button>
+
+      <div className="relative cursor-pointer" ref={treeRef}>
+        <img
+          onClick={shakeTree}
+          src="/images/tree.svg"
+          alt="Tree"
+          id="apple-tree"
+          className="absolute"
+        />
+        <div className="flex items-center space-x-10 absolute left-[9rem] top-[12rem] ">
+          {treeList.map((apple, index) => (
+            <Apple key={index} id={index} onFloor={apple.onFloor} />
+          ))}
+        </div>
       </div>
     </div>
   );
