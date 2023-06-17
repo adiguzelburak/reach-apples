@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  padding: 2rem;
   overflow-x: hidden;
   overflow-y: hidden;
   --tw-bg-opacity: 1;
@@ -31,7 +32,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(665px);
+    transform: translateY(620px);
   }
 }
 
